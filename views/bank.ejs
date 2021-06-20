@@ -1,0 +1,27 @@
+<%- include("header") -%>
+
+<div class="wrapper">
+    <div class="nested-wrapper">
+        <div class="content">
+            <img class="bank-image" src="/images/bank.gif" alt="bank.png">
+            <h1>Quantum Bank</h1>
+            <p>“Business and life are like a bank account you can’t take out more than you put in.”</p>
+            <h6>by - Ashutosh Tripathi</h6>
+        </div>
+    </div>
+    
+</div>
+
+<script >
+    $(document).ready(function(){
+        $("#footer").css("display","none");
+        $("#search-box").css("display","none");
+
+        let bodyHeight = $(document).outerHeight();
+            let footerHeight = $(".navbar").outerHeight();
+            let bodyWrapperHeight = bodyHeight-footerHeight;
+            $(".wrapper").css('height',`${bodyWrapperHeight}px`);
+    });
+</script>
+
+<%-include("footer")-%>
